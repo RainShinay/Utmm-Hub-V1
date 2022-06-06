@@ -1,0 +1,72 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Utmm Mobile Hub V1", "Serpent")
+
+-- Tabs
+
+local Tab1 = Window:NewTab("Misc")
+local Tab1Section = Tab1:NewSection("Powers")
+local Tab2 = Window:NewTab("Scripts")
+local Tab2Section = Tab2:NewSection("Op")
+local Tab3 = Window:NewTab("Animations")
+local Tab3Section = Tab3:NewSection("R15 Animation")
+-- Buttons/Windows/Idk
+
+Tab1Section:NewButton("InfJump", "God", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+Tab1Section:NewTextBox("Fov","Max Fov - 120", function(txt) game.Workspace.CurrentCamera.FieldOfView = txt
+end)
+
+Tab2Section:NewButton("Weapons", "Click on skins to equip", function()
+    for _,v in pairs(game.Players.LocalPlayer.Weapons:GetDescendants()) do
+if v:IsA("BoolValue") and v.Value == false then
+v.Value = true
+  end
+end
+Tab1Section:NewButton("Fly"), "Gives you fly", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/RPv4GELs"))()
+end)
+Tab1Section:NewTextBox("Walkspeed","Gives You Power Of Sonic", function(txt) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+Tab1Section:NewTextBox("JumpPower","Power Of Gravity Coil", function(txt)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+Tab3Section:NewButton("Zombie", "To lock cooler", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616160636"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616161997"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616156119"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616157476"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+    end
+end
+end)
+Tab3Section:NewButton("Ninja", "To lock cooler", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616160636"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+    end
+end
+end)
+end)
